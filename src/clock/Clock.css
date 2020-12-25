@@ -1,0 +1,31 @@
+.clock {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    flex-direction: row;
+    height: auto;
+    color: white;
+    margin: 0 10%;
+}
+
+/*.colon {
+    max-width: 50% !important;
+    max-height: 50%;
+} */
+.banner {
+    max-width: 50%;
+    height: auto;
+}
+
+
+/*.clock img {
+    max-width: 50%;
+    width: auto;
+    max-height: 50%;
+    height: auto;
+}*/
+
+.content {
+    display: flex;
+}

@@ -1,0 +1,35 @@
+html, body {
+  background-color: #ED2124;
+  height: 100%;
+}
+
+.root {
+  height: 100%;
+}
+
+.banner {
+  max-width: 250px !important;
+  height: auto;
+}
+
+@media(min-width: 768px) {
+  .banner {
+    max-width: 500px !important;
+    height: auto;
+  }
+}
+
+/*.container img {
+  max-width: 50%;
+    width: auto;
+    max-height: 50%;
+    height: auto;
+} */
+
+.container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+}
