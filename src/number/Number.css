@@ -1,9 +1,22 @@
 .colon {
-    height: auto;
-    max-width: 50%;
+    max-height: 100px;
+    margin-top: 15px;
 }
 
-img {
+.number {
     max-width: 100%;
     height: auto;
 }
+
+
+@media (max-width: 769px) {
+    .colon {
+        max-height: 35px;
+        margin-top: 0px;
+    }
+    
+    .number {
+        max-width: 40%; 
+        height: auto;
+    }
+  }

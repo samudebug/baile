@@ -1,7 +1,11 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import './Clock.css';
 import Number from '../number/Number';
-
+import { Image } from 'react-bootstrap';
+import dias from '../assets/dias.png';
+import hrs from '../assets/hrs.png';
+import min from '../assets/min.png';
+import seg from '../assets/seg.png';
 export default function Clock(props) {
     const [timeLeft, setTimeLeft] = useState({
         days: 0,
@@ -18,37 +22,67 @@ export default function Clock(props) {
         return () => clearTimeout(timer);
     })
 
-    const END_DATE = new Date("Feb 19, 2021 18:00:00");
+    const END_DATE = new Date("Feb 19, 2021 00:00:00");
 
-    function getText(content)  {
+    function getText(content, isDays) {
         const contentString = content.toString();
         if (contentString.length === 2) {
             return (
-                <div className="content">
-                <Number number={contentString.charAt(0)}/>
-                <Number number={contentString.charAt(1)}/>
+                <div className="numbers">
+                    <Number number={contentString.charAt(0)} className="number" />
+                    <Number number={contentString.charAt(1)} className="number" />
                 </div>
             );
         }
-        return (
-            <div className="content">
-                <Number number='0'/>
-                <Number number={contentString}/>
-            </div>
+        return (isDays ? (<div className="numbers days">
+            <Number number='0' className="number" />
+            <Number number={contentString} className="number" />
+        </div>) : (<div className="numbers">
+            <Number number='0' className="number" />
+            <Number number={contentString} className="number" />
+        </div>)
+
         );
     }
 
     function getContent() {
-        
+
         return (
             <div className="clock">
-                {getText(timeLeft.days)}
-                <Number number="col" className="colon"/>
-                {getText(timeLeft.hours)}
-                <Number number="col" className="colon"/>
-                {getText(timeLeft.minutes)}
-                <Number number="col" className="colon"/>
-                {getText(timeLeft.seconds)}
+                <div className="content-wrapper">
+                    <div className="content">
+                        <div className="numbers-text ">
+                            {getText(timeLeft.days, true)}
+                            <Image src={dias} className="words" id="dias" />
+                        </div>
+                        <Number number="col" className="colon" />
+                    </div>
+                </div>
+                <div className="content-wrapper">
+                    <div className="content">
+                        <div className="numbers-text">
+                            {getText(timeLeft.hours)}
+                            <Image src={hrs} className="words" />
+
+                        </div>
+                        <Number number="col" className="colon" id="colon-hours" />
+                    </div>
+                </div>
+                <div className="content-wrapper">
+                    <div className="content">
+                        <div className="numbers-text">
+                            {getText(timeLeft.minutes)}
+                            <Image src={min} className="words" />
+                        </div>
+                        <Number number="col" className="colon" />
+                    </div>
+                </div>
+                <div className="content-wrapper">
+                    <div className="numbers-text">
+                        {getText(timeLeft.seconds)}
+                        <Image src={seg} className="words" />
+                    </div>
+                </div>
             </div>
         )
     }

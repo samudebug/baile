@@ -26,6 +26,58 @@
     height: auto;
 }*/
 
+.numbers {
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    justify-content: center;
+}
+
 .content {
     display: flex;
+
+}
+
+.numbers-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#colon-hours {
+    margin-top: 20px;
+}
+
+.words {
+    max-width: 190px;
+    margin-top: 10px;
+}
+
+.days {
+    margin-top: -25px;
+}
+
+.colon-days {
+    margin-top: -10px;
+}
+#dias {
+    margin-top: 15px
+}
+@media(max-width: 769px) {
+    .words {
+        max-width: 70px;
+        margin-top: 10px;
+    }
+    #colon-hours {
+        margin-top: 0px;
+    }
+
 }

@@ -34,7 +34,7 @@ export default class Number extends React.Component {
 
     render() {
         return (
-            <img src={this.getNumber(this.props.number)} className={this.props.className}/>
+            <img src={this.getNumber(this.props.number)} className={this.props.className} style={this.props.style} id={this.props.id}/>
         )
     }
 }
