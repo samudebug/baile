@@ -23,7 +23,8 @@ function App() {
         <Col md={12} className="align-self-center">
 
             {
-              hasCountdownEnded() ? <div>
+              hasCountdownEnded() ? <div style={{height: '100%'}}>
+                
                 <YoutubeVideo/>
               </div> : <Clock />
             }

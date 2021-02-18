@@ -1,4 +1,32 @@
-.video {
+.video-wrapper {
     align-items: center;
     text-align: center;
+    height: 100%;
+    display: flex;
+    justify-content: center;
 }
+
+.moldura {
+    position: absolute;
+    height: 620px;
+    width: 945px;
+}
+
+@media(max-width: 480px) {
+    .moldura {
+        height: 225px;
+        width: 410px;
+    }
+  }
+
+.video {
+    height: 515px;
+    width: 760px;
+}
+
+@media(max-width: 480px) {
+    .video {
+        height: 185px;
+        width: 330px;
+    }
+  }
