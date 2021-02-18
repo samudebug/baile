@@ -11,7 +11,6 @@ import num8 from './images/8.png';
 import num9 from './images/9.png';
 import colon from './images/ponto.png'
 import './Number.css';
-import {Image} from 'react-bootstrap';
 export default class Number extends React.Component {
     
     getNumber(i) {
@@ -34,7 +33,7 @@ export default class Number extends React.Component {
 
     render() {
         return (
-            <img src={this.getNumber(this.props.number)} className={this.props.className} style={this.props.style} id={this.props.id}/>
+            <img src={this.getNumber(this.props.number)} className={this.props.className} style={this.props.style} id={this.props.id} alt="number"/>
         )
     }
 }
