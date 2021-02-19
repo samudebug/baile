@@ -12,11 +12,23 @@ html, body {
   max-width: 300px !important;
   height: auto;
 }
+
+
+
 @media(min-width: 768px) {
   .banner {
     max-width: 700px !important;
     height: auto;
   }
+}
+
+.watch {
+  max-width: 300px !important;
+  height: auto;
+}
+
+.watch-wrapper {
+  height: 5%;
 }
 
 .footer {
@@ -32,7 +44,12 @@ html, body {
 }
 
 
-
+.wrapper-end {
+  background: url(./assets/bg-end.png) center top no-repeat;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
 
 .wrapper {
   background: url(./assets/bg2.png) center top no-repeat;
@@ -78,12 +95,14 @@ html, body {
 }
 
 .clock-wrapper {
-  height: 80%;
+  height: 83%;
+  position: relative;
+  top: 5%;
 }
 
 
 .footer-wrapper {
-  height: 10%;
+  height: 5%;
 }
 
 .banner-wrapper {
