@@ -4,7 +4,7 @@ import moldura from '../assets/moldura.png'
 import { Image } from 'react-bootstrap';
 function YoutubeVideo() {
     
-    const youtubeVideo = "https://www.youtube.com/embed/VgN7shMqsIE";
+    const youtubeVideo = "https://www.youtube.com/embed/videoseries?list=PLU8MThNhi5nM_topLHAJYqtufy-IuYpJJ";
     return (
         <div className="video-wrapper">
             <Image src={moldura} className="moldura"/>
